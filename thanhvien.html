@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CTEAN3 - Thành viên</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .member-section {
+            max-width: 1100px;
+            margin: 55px auto;
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        .member-section .section-title {
+            margin-bottom: 20px;
+        }
+
+        .member-intro {
+            color: #777681;
+            margin-bottom: 35px;
+        }
+
+        .loyalty-box {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            padding: 35px 25px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 8px 30px rgba(40, 40, 55, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .loyalty-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .loyalty-box h3 {
+            font-size: 19px;
+            margin-bottom: 15px;
+            color: #555461;
+        }
+
+        .loyalty-points {
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #7771a8;
+        }
+
+        .loyalty-label {
+            color: #777681;
+            font-size: 14px;
+        }
+
+        .loyalty-note {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 25px;
+            text-align: left;
+            line-height: 1.9;
+            color: #666572;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+        }
+
+        .loyalty-note h3 {
+            margin-top: 0;
+            color: #292832;
+        }
+
+        .loyalty-note strong {
+            color: #7771a8;
+        }
+
+        .back-to-top {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 48px;
+            height: 48px;
+            border: none;
+            border-radius: 50%;
+            background: #7771a8;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(40, 40, 55, 0.2);
+            transition: transform 0.25s, background 0.25s;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background: #5f598f;
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 600px) {
+            .member-section {
+                margin: 35px auto;
+                padding: 0 16px;
+            }
+
+            .loyalty-box {
+                padding: 28px 16px;
+            }
+
+            .loyalty-points {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER: giữ nguyên cấu trúc của CTEAN3 -->
+    <h1 class="logo">CTEAN3 - TEA & COFFEE</h1>
+
+    <h2>Thưởng thức từng dòng code bùng nổ vị giác</h2>
+
+    <nav class="navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="menu.html">Menu</a>
+        <a href="gioithieu.html">Giới thiệu</a>
+        <a href="thanhvien.html" class="active">Thành viên</a>
+        <a href="thanhtoan.html">Thanh toán</a>
+    </nav>
+
+    <!-- NỘI DUNG THÀNH VIÊN -->
+    <main class="member-section">
+
+        <h2 class="section-title">ĐIỂM THÀNH VIÊN CTEAN3</h2>
+
+        <p class="member-intro">
+            Nhiều ngôn ngữ lập trình hơn, nhiều crypto hơn!
+        </p>
+
+        <section class="loyalty-box">
+            <div class="loyalty-icon">✦</div>
+
+            <h3>ĐIỂM THÀNH VIÊN CỦA BẠN</h3>
+
+            <div class="loyalty-points" id="loyalty-points">0</div>
+
+            <p class="loyalty-label">điểm tích lũy</p>
+        </section>
+
+        <section class="loyalty-note">
+            <h3>✧ QUY CHẾ TÍCH ĐIỂM</h3>
+
+<p>
+    Mỗi 50.000đ thanh toán được tích lũy
+    <strong>5 điểm thành viên</strong>.
+    Điểm được tính theo từng mốc 50.000đ hoàn chỉnh.
+</p>
+
+            <p>
+                Điểm được cập nhật sau khi đơn hàng được xác nhận
+                thanh toán thành công.
+            </p>
+
+            <p>
+                Mỗi đơn hàng chỉ được nhận điểm một lần.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: giữ nguyên cấu trúc của CTEAN3 -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <h2>CTEAN3 - TEA & COFFEE</h2>
+                <p>Thưởng thức từng dòng code bùng nổ vị giác.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Khám phá</h3>
+                <a href="index.html">Trang chủ</a>
+                <a href="menu.html">Menu</a>
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="thanhvien.html">Thành viên</a>
+                <a href="thanhtoan.html">Thanh toán</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>CONTACT US</h3>
+                <p>Địa chỉ: 235 Nguyễn Văn Cừ, Phường Chợ Quán, TPHCM</p>
+                <p>Điện thoại: (+84)336366718</p>
+                <p>Email: ctean3.cf@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 CTEAN3 - TEA & COFFEE
+        </div>
+    </footer>
+
+    <!-- NÚT CUỘN LÊN ĐẦU TRANG -->
+    <button
+        class="back-to-top"
+        id="back-to-top"
+        type="button"
+        aria-label="Cuộn lên đầu trang"
+        title="Cuộn lên đầu trang">
+        ↑
+    </button>
+
+    <script>
+        // Đọc điểm thành viên đã lưu
+        function updatePointsDisplay() {
+            const points = Number(
+                localStorage.getItem("ctean3_points")
+            ) || 0;
+
+            document.getElementById("loyalty-points").textContent = points;
+        }
+
+        updatePointsDisplay();
+
+        // Cuộn lên đầu trang
+        document.getElementById("back-to-top").addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+<strong id="loyalty-points">0</strong>
+</body>
+</html>
