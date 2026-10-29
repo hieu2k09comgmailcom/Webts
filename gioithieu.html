@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giới thiệu - CTEAN3 TEA & COFFEE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ===== CHỈNH NỘI DUNG GIỚI THIỆU ===== */
+
+        .about-container {
+            width: 88%;
+            max-width: 1050px;
+            margin: 35px auto 45px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .about-container .about-hero,
+        .about-container .about-card {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 0 24px;
+            padding: 32px 30px;
+
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 22px;
+            box-shadow: 0 7px 24px rgba(40, 40, 60, 0.07);
+        }
+
+        .about-container .about-hero {
+            padding: 36px 35px;
+            text-align: center;
+        }
+
+        .about-container .about-hero h2,
+        .about-container .about-card h2 {
+            margin: 0 0 18px;
+            padding: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+
+            color: #343440;
+            font-family: "Poppins", sans-serif;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: center;
+        }
+
+        .about-container .about-hero p,
+        .about-container .about-card > p {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+
+            color: #626270;
+            font-family: "Poppins", sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .about-container .about-hero p {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* ===== BA GIÁ TRỊ ===== */
+
+        .about-container .about-values {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin: 26px 0;
+        }
+
+        .about-container .about-value {
+            box-sizing: border-box;
+            padding: 24px 20px;
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(40, 40, 60, 0.07);
+
+            transition: transform 0.25s ease;
+        }
+
+        .about-container .about-value:hover {
+            transform: scale(1.03);
+        }
+
+        .about-container .about-value h3 {
+            margin: 0 0 12px;
+            padding: 0;
+            background: transparent;
+            color: #454550;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .about-container .about-value p {
+            margin: 0;
+            color: #626270;
+            font-size: 13px;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        /* ===== CÁC NÚT LIÊN KẾT ===== */
+
+        .about-container .about-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 30px 0 40px;
+        }
+
+        .about-container .about-links a {
+            display: inline-block;
+            padding: 11px 22px;
+
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(40, 40, 60, 0.07);
+
+            color: #343440;
+            font-family: "Poppins", sans-serif;
+            font-size: 13px;
+            text-decoration: none;
+
+            transition: 0.25s ease;
+        }
+
+        .about-container .about-links a:hover {
+            background: #e5e5ed;
+            transform: translateY(-2px);
+        }
+
+        /* ===== BẢNG THÀNH VIÊN ===== */
+
+        .about-container .team-section {
+            margin-top: 25px;
+        }
+
+        .about-container .team-intro {
+            margin: 0 0 22px !important;
+            text-align: center;
+        }
+
+        .about-container .team-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid rgba(150, 150, 170, 0.2);
+            border-radius: 14px;
+        }
+
+        .about-container .team-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.78);
+            color: #343440;
+            font-family: "Poppins", sans-serif;
+            font-size: 13px;
+        }
+
+        .about-container .team-table th,
+        .about-container .team-table td {
+            padding: 13px 12px;
+            border-bottom: 1px solid rgba(140, 140, 160, 0.18);
+            text-align: left;
+        }
+
+        .about-container .team-table th {
+            background: rgba(225, 225, 235, 0.9);
+            color: #343440;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .about-container .team-table th:first-child,
+        .about-container .team-table td:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        .about-container .team-table tbody tr:hover {
+            background: rgba(225, 225, 240, 0.65);
+        }
+
+        .about-container .team-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ===== NÚT CUỘN LÊN ĐẦU TRANG ===== */
+
+        #backToTop {
+            position: fixed;
+            right: 28px;
+            bottom: 28px;
+            z-index: 999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            padding: 0;
+
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            background: rgba(225, 228, 235, 0.88);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            color: #555967;
+            font-family: "Poppins", sans-serif;
+            font-size: 25px;
+            cursor: pointer;
+            box-shadow: 0 5px 18px rgba(80, 85, 100, 0.18);
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: 0.3s ease;
+        }
+
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        #backToTop:hover {
+            background: #d1d5df;
+        }
+
+        /* ===== RESPONSIVE ===== */
+
+        @media (max-width: 768px) {
+            .about-container {
+                width: 92%;
+                margin-top: 25px;
+            }
+
+            .about-container .about-values {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .about-container .about-hero,
+            .about-container .about-card {
+                padding: 25px 18px;
+            }
+
+            .about-container .about-hero h2,
+            .about-container .about-card h2 {
+                font-size: 20px;
+            }
+
+            .about-container .team-table {
+                min-width: 530px;
+            }
+
+            #backToTop {
+                right: 18px;
+                bottom: 18px;
+                width: 44px;
+                height: 44px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- HEADER GIỐNG TRANG CHỦ -->
+    <h1 class="logo">CTEAN3 - TEA &amp; COFFEE</h1>
+
+    <h2>Thưởng thức từng dòng code bùng nổ vị giác</h2>
+
+    <!-- NAVBAR DÙNG CSS CHUNG TỪ style.css -->
+    <nav class="navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="menu.html">Menu</a>
+        <a href="gioithieu.html" class="active">Giới thiệu</a>
+        <a href="thanhvien.html">Thành viên</a>
+        <a href="thanhtoan.html">Thanh toán</a>
+    </nav>
+
+    <!-- NỘI DUNG GIỚI THIỆU -->
+    <main class="about-container">
+
+        <section class="about-hero">
+            <h2>Về CTEAN3</h2>
+            <p>
+                Chào mừng bạn đến với CTEAN3 - Coffee &amp; Tea!
+                Chúng mình mong muốn mang đến những thức uống thơm ngon
+                cùng những khoảnh khắc thư giãn, dễ chịu trong ngày.
+                Dù bạn yêu trà, mê cà phê hay thích khám phá hương vị mới,
+                CTEAN3 luôn hy vọng sẽ là một điểm dừng chân thật vui.
+            </p>
+        </section>
+
+        <section class="about-card">
+            <h2>Câu chuyện của chúng mình</h2>
+            <p>
+                CTEAN3 bắt đầu từ tình yêu dành cho trà, cà phê và
+                những cuộc trò chuyện giản dị. Một ly nước không chỉ
+                là thức uống mà còn là khoảng nghỉ giữa ngày bận rộn,
+                dịp gặp gỡ bạn bè hoặc niềm vui nho nhỏ dành cho bản thân.
+            </p>
+        </section>
+
+        <section class="about-card">
+            <h2>Sứ mệnh của chúng mình</h2>
+            <p>
+                Chúng mình hướng đến trải nghiệm thân thiện, thực đơn
+                đa dạng và cách phục vụ chu đáo. CTEAN3 mong bạn tìm được
+                thức uống phù hợp với sở thích và có những phút giây
+                thật thoải mái.
+            </p>
+        </section>
+
+        <section class="about-values">
+            <article class="about-value">
+                <h3>☕ Hương vị</h3>
+                <p>Đa dạng thức uống trà và cà phê cho nhiều sở thích.</p>
+            </article>
+
+            <article class="about-value">
+                <h3>🤍 Thân thiện</h3>
+                <p>Trải nghiệm gần gũi, dễ chịu dành cho khách hàng.</p>
+            </article>
+
+            <article class="about-value">
+                <h3>✨ Trải nghiệm</h3>
+                <p>Luôn cố gắng để mỗi lần ghé thăm đều đáng nhớ.</p>
+            </article>
+        </section>
+
+        <div class="about-links">
+            <a href="menu.html">Khám phá thực đơn</a>
+            <a href="index.html">Quay về trang chủ</a>
+        </div>
+
+        <!-- THÀNH VIÊN NHÓM 5 -->
+        <section class="about-card team-section">
+            <h2>THÀNH VIÊN NHÓM 5</h2>
+
+            <p class="team-intro">
+                Chúng mình là Nhóm 5. Mỗi thành viên đều đóng góp
+                ý tưởng và công sức để cùng xây dựng website
+                CTEAN3 - TEA & COFFEE.
+            </p>
+
+            <div class="team-table-wrapper">
+                <table class="team-table">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ và tên</th>
+                            <th>Lớp</th>
+                            <th>Vai trò</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyễn Hoàng Bảo Hân</td>
+                            <td>12CV1</td>
+                            <td>Giới thiệu</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Đặng Lê Yến Nhi</td>
+                            <td>12CV1</td>
+                            <td>Design/Thanh toán</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Trần Phương Hồng Ân</td>
+                            <td>12CV2</td>
+                            <td>Thành viên</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Nguyễn Huỳnh Trung Hiếu</td>
+                            <td>12CT2</td>
+                            <td>Website</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Ngô Tuấn Trung</td>
+                            <td>12CT2</td>
+                            <td>Trang chủ</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>Trần Ngọc Mai Trâm</td>
+                            <td>12CV1</td>
+                            <td>Menu</td>
+                        </tr>
+						
+						  <tr>
+                            <td><b>7</b></td>
+                            <td><b>Châu Giang Phước Thành</b></td>
+                            <td><b>OpenAI</b></td>
+                            <td><b>Xử lý code</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER DÙNG CLASS CHUNG CỦA WEBSITE -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <h2>CTEAN3 - TEA &amp; COFFEE</h2>
+                <p>Thưởng thức từng dòng code bùng nổ vị giác.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Khám phá</h3>
+                <a href="index.html">Trang chủ</a>
+                <a href="menu.html">Menu</a>
+                <a href="gioithieu.html">Giới thiệu</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>CONTACT US</h3>
+                <p>Địa chỉ: 235 Nguyễn Văn Cừ, Phường Chợ Quán, TPHCM</p>
+                <p>Điện thoại: (+84)336366718</p>
+                <p>Email: ctean3.cf@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 CTEAN3 - TEA &amp; COFFEE
+        </div>
+    </footer>
+
+    <!-- NÚT CUỘN LÊN ĐẦU TRANG -->
+    <button type="button" id="backToTop"
+        aria-label="Cuộn lên đầu trang"
+        title="Cuộn lên đầu trang">↑</button>
+
+    <script>
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        });
+
+        backToTop.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán - CTEAN3</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="logo">CTEAN3 - TEA & COFFEE</h1>
+
+    <h2>Thưởng thức từng dòng code bùng nổ vị giác</h2>
+
+    <nav class="navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="menu.html">Menu</a>
+        <a href="gioithieu.html">Giới thiệu</a>
+        <a href="thanhvien.html">Thành viên</a>
+        <a href="thanhtoan.html" class="active">Thanh toán</a>
+    </nav>
+
+    <main class="checkout-container">
+
+        <h2 class="checkout-title">YOUR CART</h2>
+        <p class="checkout-subtitle">
+            Chọn món yêu thích để code ngay nào!
+        </p>
+
+        <div id="cart-items">
+            <!-- Danh sách sản phẩm sẽ được JavaScript hiển thị ở đây -->
+        </div>
+
+<div class="voucher-box">
+    <h3>VOUCHER</h3>
+
+    <div class="voucher-input">
+        <input
+            type="text"
+            id="voucher-code"
+            placeholder="Nhập mã giảm giá"
+        >
+        <button type="button" id="apply-voucher">
+            Áp dụng
+        </button>
+    </div>
+
+    <p id="voucher-message" aria-live="polite"></p>
+    <p>Giảm giá: <strong id="discount-amount">0đ</strong></p>
+</div>
+
+        <div class="checkout-summary">
+            <p>Tổng thanh toán:</p>
+            <h2 id="cart-total">0đ</h2>
+	<button id="checkout-button" type="button">
+                Thanh toán
+            </button>
+        </div>
+        <div id="qr-section" hidden>
+            <h2>THANK YOU FOR YOUR ORDER!</h2>
+            <p>Quét mã QR bên dưới để hoàn tất đơn hàng.</p>
+
+            <img id="payment-qr" src="" alt="Mã QR thông tin đơn hàng mô phỏng">
+
+            <p>CTEAN3 chúc bạn một ngày thật Python/C++/Java/Pascal/HTML/...</p>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h2>CTEAN3 - TEA & COFFEE</h2>
+            <p>Thưởng thức từng dòng code bùng nổ vị giác.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Khám phá</h3>
+            <a href="index.html">Trang chủ</a>
+            <a href="menu.html">Menu</a>
+            <a href="gioithieu.html">Giới thiệu</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>CONTACT US</h3>
+            <p>Địa chỉ: 235 Nguyễn Văn Cừ, Phường Chợ Quán, TPHCM</p>
+            <p>Điện thoại: (+84)336366718</p>
+            <p>Email: ctean3.cf@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 CTEAN3 - TEA & COFFEE
+    </div>
+</footer>
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" title="Cuộn lên đầu trang"
+        aria-label="Cuộn lên đầu trang">
+    ↑
+</button>
+
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+</body>
+</html>
